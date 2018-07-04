@@ -1,0 +1,23 @@
+
+<h2 class="my-4">
+    <img src="https://cdn0.iconfinder.com/data/icons/picons-social/57/109-slack-128.png" height="50">   
+    Mensagens do Slack
+    <small>salve uma mensagem com a slash abaixo</small>
+</h2>
+<pre>/novaquotes sua mensagem interessante by: @jopss.sossoloti</pre>
+
+<div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" *ngFor="let mensagem of mensagens">
+        <div class="card h-100">
+        <a href="#">
+            <img class="card-img-top" src="assets/img/time/{{retornarUserBy(mensagem)}}.jpg" alt="">
+        </a>
+        <div class="card-body">
+            <h4 class="card-title">
+            <a href="#">{{mensagem.user_name}}</a>
+            </h4>
+            <p class="card-text">{{mensagem.text}}</p>
+        </div>
+        </div>
+    </div>
+</div>
